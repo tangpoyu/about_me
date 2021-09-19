@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+      list-style: none;
+    }
+    html,body{
+      /* Html,body皆設置為100% */
+      height: 100%;
+    }
+    body{
+      display: flex;
+      align-items: center;
+      background-color:cadetblue;
+    }
+    .wrap{
+      width:1200px;
+      display: flex;
+      margin:auto;
+      
+    }
+    .wrap .item{
+      width:368px;
+      margin:15px;
+      text-align: center;
+      background-color: cornsilk;
+      border: 1px solid blue;
+      transform: translateY(0px);
+      transition: transform .5s;
+    }
+    /* 無寫觸發對象則為自己 */
+    .wrap .item:hover{
+      transform: translateY(-50px);
+    }
+    .wrap .item:hover .txt{
+      background-image: linear-gradient(0deg, rgb(255, 117, 9),rgb(255, 153, 74));
+      color: white;
+    }
+    .wrap .item:hover .txt h2{
+      border-bottom-color: white;
+    }
+    /* 觸發對象為 .wrap.item.txt:before */
+    .wrap .item:hover  .txt:before{
+      border-left: 184px solid rgb(255, 153, 74);
+      border-right: 184px solid rgb(255, 153, 74);
+    }
+    
+    .wrap img{
+      width: 100%;
+      vertical-align: middle;
+
+    }
+    .wrap .item .txt{
+      position: relative;
+      
+    }
+    .wrap .item .txt:before{
+      content:'';
+      width: 0;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-left: 184px solid cornsilk;
+      border-right: 184px solid cornsilk;
+      position: absolute;
+      transform: translateY(-100%);
+      top:0;
+      left: 0;
+    }
+    .wrap .item .txt h2{
+      border-bottom: 1px solid gray;
+      padding-bottom: 0.3em;
+      margin-bottom: 0.3em;
+      transition: .5s;
+    }
+    .wrap .item .txt p{
+      line-height: 1.5;
+      font-family: 'Grechen Fuemen', cursive;
+      padding: 20px;
+      transition: .5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="item">
+      <img src="https://picsum.photos/300/300?random=1">
+      <div class="txt">
+        <h2>Poyu</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cum et quod voluptates, perspiciatis ipsum quis expedita debitis asperiores nihil ullam? Libero a obcaecati amet sint culpa optio itaque vero.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/300/300?random=2">
+      <div class="txt">
+        <h2>Cena</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cum et quod voluptates, perspiciatis ipsum quis expedita debitis asperiores nihil ullam? Libero a obcaecati amet sint culpa optio itaque vero.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://picsum.photos/300/300?random=3">
+      <div class="txt">
+        <h2>Daniel</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cum et quod voluptates, perspiciatis ipsum quis expedita debitis asperiores nihil ullam? Libero a obcaecati amet sint culpa optio itaque vero.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
