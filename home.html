@@ -7,10 +7,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
-  <!-- 英文字型 -->
+  <!--跑馬燈英文字型 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Stick+No+Bills:wght@700&display=swap" rel="stylesheet">
+  <!-- 自介英文字型 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
 
   <title>Document</title>
   <style>
@@ -112,6 +116,7 @@
     }
     .wrap .title .item .txt{
      width: 100%;
+     font-family: 'Bonheur Royale', cursive;
     }
     .wrap .title .item .txt h2{
       font-size: 50px;
@@ -121,6 +126,7 @@
     }
     .wrap .title .item .txt p{
       text-align: center;
+      
     }
     
     @media screen and (max-width : 767px) {
@@ -139,12 +145,33 @@
       }
       .wrap .title{
         flex-direction: column;
+        background-image: none;
       }
       .wrap .title h2{
         font-size: 30px;
+        background-color: rgb(176, 117, 184);
+        width: 100%;
       }
       .wrap .title .item {
         flex-direction: column;
+        opacity: 1;
+        width: 100%;
+        margin: 0px;
+        background-color: white;
+      } 
+      .wrap .title .item .txt h2 {
+        background-color: rgb(165, 127, 255);
+        font-size: 30px;
+      }
+      .wrap .title .item img {
+        margin: auto;
+        background-color: white;
+      }
+      .wrap .title .item .txt p{
+        padding: 10px;
+        
+        background-color: purple;
+        color: white;
       }
     }
     @media screen and (min-width : 768px){
