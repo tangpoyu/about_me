@@ -51,7 +51,7 @@
     }
     @keyframes slide {
         0% {
-        transform: translatex(-30%)
+        transform: translatex(-100%)
         }
     
         100% {
@@ -61,19 +61,15 @@
     /* 橫幅 */
     .banner{
       width: 100%;
-      display: flex;
-      position: relative;
+      font-size: 0px;
       
     }
-    .banner p{
-      position: absolute;
-      font-size: 100px;
-      color: white;
-    }
+    
     
     html,body{
       /* Html,body皆設置為100% */
-      height: 100%;
+      width: 100%;
+      
     }
     body{
       display: flex;
@@ -126,7 +122,36 @@
     .wrap .title .item .txt p{
       text-align: center;
     }
-   
+    
+    @media screen and (max-width : 768px) {
+      .banner img{
+        width: 100%;
+      }
+      .row .col-12{
+        padding: 5px;
+        font-size: 3px;
+      }
+      .row .news_marquee{
+        font-size: 20px;
+      }
+      body{
+        width: 100%;
+      }
+      .wrap .title{
+        flex-direction: column;
+      }
+      .wrap .title h2{
+        font-size: 30px;
+      }
+      .wrap .title .item {
+        flex-direction: column;
+      }
+    }
+    @media screen and (min-width : 768px){
+      .news_marquee{
+        animation : slide 12s linear infinite ;
+      }
+    }
   
   </style>
 </head>
@@ -135,8 +160,8 @@
   <!-- 導覽列 -->
   <nav>
     <ul>
-      <li><a href="#">首頁</a></li>
-      <li><a href="#">作品</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">works</a></li>
     </ul>
   </nav>
 
