@@ -234,6 +234,9 @@ button.school_btn_color{
   .wrap .title .item .txt h2 {
     font-size: 30px;
   }
+  .wrap .title .item .txt h3{
+    height: 50px;
+  }
   .wrap .title .item img {
     margin: auto;
     border-radius: 50%;
