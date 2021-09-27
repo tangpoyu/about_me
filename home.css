@@ -1,0 +1,259 @@
+*{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+/* 導覽列 */
+nav{
+  width: 100%;
+  background-color: rgb(37, 33, 25);
+  display: flex;
+  justify-content: space-between;
+}
+nav a{
+  text-decoration: none;
+  margin: 10px;
+  color: whitesmoke;
+}
+nav ul{
+  display: flex;
+  
+}
+
+.marquee_control{
+  background-image: url(/pic/startB.png);
+  background-size: cover;
+  width:20px;
+  height:20px;
+  
+}
+button.paused{
+  background-image: url(/pic/pauseB.png)
+}
+
+ /* 跑馬燈 */
+ .container{
+  width: 100%;
+ }
+ .row{
+  background-color: black;
+  width: 100%;
+}
+ .news_marquee {
+    animation : slide 7s linear infinite ;
+    color: azure;
+    font-size: 30px;
+    font-family: 'Bonheur Royale', cursive;
+    font-family: 'Stick No Bills', sans-serif;
+}
+ /* 元素類別需與想插入的元素相同 */
+ div.play {
+  animation-play-state: paused;
+}
+@keyframes slide {
+    0% {
+    transform: translatex(-100%)
+    }
+
+    100% {
+    transform: translatex(100%)
+    }
+}
+/* 橫幅 */
+.banner{
+  width: 100%;
+  font-size: 0px;
+  
+}
+.banner img{
+  width: 100%;
+}
+
+
+html,body{
+  /* Html,body皆設置為100% */
+  width: 100%;
+  
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap{
+  width:100%;
+  position: relative;
+ }
+.wrap .title{
+  width:100%;
+  height: 400px;
+  
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(0deg,rgb(255, 0, 0),rgb(120, 1, 255))
+}
+.wrap .title:hover .item{
+  opacity: 1;
+  position: relative;
+}
+
+
+.school_button_group{
+  display: flex;
+  position:absolute;
+  right: 0;
+  justify-content: space-evenly;
+  background-color: rgb(37, 33, 25);
+}
+
+.school_button{
+  border: none;
+  width:30px;
+  height: 30px;
+  margin: 1px;
+  border: solid 1px black;
+  color: rgb(255, 255, 255);
+  background-color: rgb(45, 43, 53);
+}
+
+button.school_btn_color{
+  background-color: rgb(112, 217, 231);
+}
+
+
+
+.wrap .title h2{
+  font-size: 80px;
+  text-align: center;
+  width: 40%;
+  color:rgb(3, 2, 2);
+  
+}
+.wrap .title .item {
+  display: flex;
+  width:60%;
+  position: relative;
+  
+  border:1px solid rgb(165, 127, 255);
+  margin: 40px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.wrap .title .item img{
+  width: 33%;
+}
+.wrap .title .item .txt{
+ width: 70%;
+ 
+}
+.wrap .title .item .txt h2{
+  font-size: 50px;
+  color: white;
+  font-family: 'Bonheur Royale', cursive;
+  width: 100%;
+}
+.wrap .title .item .txt h3{
+  text-align: center;
+  font-family: 'Bonheur Royale', cursive;
+  padding-top: 5px;
+  color: rgb(112, 217, 231);
+  font-size: 25px;
+}
+.wrap .title .item .txt p{
+  text-align: center;
+  padding: 10px;
+  color:white;
+  
+}
+.school{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  position: relative;
+}
+
+.school_img{
+  width: 100%;
+  
+}
+
+.s_img{
+  width: 100%;
+  height:225px; 
+  font-size: 0px;
+  vertical-align: top;
+}
+
+.footer{
+  background-color: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width : 767px) {
+  
+  .row .col-12{
+    padding: 5px;
+    font-size: 3px;
+  }
+  .row .news_marquee{
+    font-size: 20px;
+  }
+  body{
+    width: 100%;
+  }
+  .wrap .title{
+    flex-direction: column;
+    background-image: none;
+    height: 100%;
+   
+  }
+  h2.am{
+    background-color: rgb(255, 174, 174);
+  }
+  .wrap .title h2{
+    font-size: 30px;
+    width: 100%;
+  }
+  .wrap .title .item {
+    
+    opacity: 1;
+    width: 100%;
+    margin: 0px;
+    background: rgb(188, 252, 241);
+  } 
+  .school_button_group{
+    left: 0;
+    width: 38%;
+    background-color: rgb(224, 187, 255);
+  }
+  .wrap .title .item .txt{
+    background-color: rgb(0, 0, 0);
+  }
+  .wrap .title .item .txt h2 {
+    font-size: 30px;
+  }
+  .wrap .title .item img {
+    margin: auto;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: yellow;
+  }
+  .wrap .title .item .txt p{
+    padding: 10px;
+    color: white;
+  }
+}
+@media screen and (min-width : 768px){
+  .news_marquee{
+    animation : slide 12s linear infinite ;
+  }
+  .wrap .title .item .txt p{
+    font-size: 15px;
+  }
+  .wrap .title .item {
+  background-color: rgb(45, 43, 53);
+  }
+}

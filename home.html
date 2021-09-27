@@ -16,175 +16,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
 
-  <title>Document</title>
-  <style>
-    *{
-      margin:0;
-      padding: 0;
-      list-style: none;
-    }
-    /* 導覽列 */
-    nav{
-      width: 100%;
-      background-color: rgb(37, 33, 25);
-    }
-    nav a{
-      text-decoration: none;
-      margin: 10px;
-      color: whitesmoke;
-    }
-    nav ul{
-      display: flex;
-      justify-content: center;
-    }
+  <!-- 使用jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-     /* 跑馬燈 */
-     .container{
-      width: 100%;
-     }
-     .row{
-      background-color: black;
-      width: 100%;
-    }
-     .news_marquee {
-        animation : slide 7s linear infinite ;
-        color: azure;
-        font-size: 30px;
-        font-family: 'Bonheur Royale', cursive;
-        font-family: 'Stick No Bills', sans-serif;
-    }
-    @keyframes slide {
-        0% {
-        transform: translatex(-100%)
-        }
-    
-        100% {
-        transform: translatex(100%)
-        }
-    }
-    /* 橫幅 */
-    .banner{
-      width: 100%;
-      font-size: 0px;
-      
-    }
-    
-    
-    html,body{
-      /* Html,body皆設置為100% */
-      width: 100%;
-      
-    }
-    body{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .wrap{
-      width:100%;
-      position: relative;
-     }
-    .wrap .title{
-      width:100%;
-      height: 400px;
-     
-      display: flex;
-      align-items: center;
-      background-image: linear-gradient(0deg,rgb(124, 120, 120),black)
-    }
-    .wrap .title:hover .item{
-      opacity: 1;
-    }
-    .wrap .title h2{
-      font-size: 80px;
-      text-align: center;
-      width: 40%;
-      color:whitesmoke;
-      
-    }
-    .wrap .title .item {
-      display: flex;
-      width:60%;
-      background-color: rgb(165, 127, 255);
-      border:1px solid rgb(165, 127, 255);
-      margin: 40px;
-      opacity: 0;
-      transition: opacity 0.5s;
-    }
-    .wrap .title .item img{
-      width: 30%;
-    }
-    .wrap .title .item .txt{
-     width: 100%;
-     font-family: 'Bonheur Royale', cursive;
-    }
-    .wrap .title .item .txt h2{
-      font-size: 50px;
-      text-align: center;
-      
-      width: 100%;
-    }
-    .wrap .title .item .txt p{
-      text-align: center;
-      
-    }
-    
-    @media screen and (max-width : 767px) {
-      .banner img{
-        width: 100%;
-      }
-      .row .col-12{
-        padding: 5px;
-        font-size: 3px;
-      }
-      .row .news_marquee{
-        font-size: 20px;
-      }
-      body{
-        width: 100%;
-      }
-      .wrap .title{
-        flex-direction: column;
-        background-image: none;
-      }
-      .wrap .title h2{
-        font-size: 30px;
-        background-color: rgb(176, 117, 184);
-        width: 100%;
-      }
-      .wrap .title .item {
-        
-        opacity: 1;
-        width: 100%;
-        margin: 0px;
-        background-color: rgba(122, 120, 107, 0.835);
-      } 
-      .wrap .title .item .txt h2 {
-        background-color: rgb(165, 127, 255);
-        font-size: 30px;
-      }
-      .wrap .title .item img {
-        margin: auto;
-        background-color: rgb(98, 17, 192);
-        border-radius: 50%;
-        margin-left: 10px;
-        margin-right: 10px;
-        
-      }
-      .wrap .title .item .txt p{
-        padding: 10px;
-        
-        background-color: purple;
-        color: white;
-      }
-    }
-    @media screen and (min-width : 768px){
-      .news_marquee{
-        animation : slide 12s linear infinite ;
-      }
-    }
-  
-  </style>
+  <title>Document</title>
+
 </head>
 <body>
 
@@ -194,6 +30,7 @@
       <li><a href="#">Home</a></li>
       <li><a href="#">Works</a></li>
     </ul>
+    <button class="marquee_control"></button>
   </nav>
 
   <!-- 跑馬燈 -->
@@ -216,26 +53,45 @@
    <!-- 關於我 -->
   <div class="wrap">
      <div class="title">
-      <h2>About Me</h2>
+      <h2 class="am">About Me</h2>
         <div class="item">
           <img src="pic/my_pic.JPG">
           <div class="txt">
+            <div class="school_button_group">
+              <!-- 有ｉｄ的話要放在前面 -->
+              <button id="university" class="school_button university">U</button>
+              <button id="Senior" class="school_button Senior">S</button>
+              <button id="junior" class="school_button junior">J</button>
+              <button id="Elementary" class="school_button Elementary">E</button>
+             </div>
             <h2>Tangpoyu</h2>
-            <p>Hello! I'm come from NYUST, major is Information Management, 
-              and I think I am a man who like to try learning and getting in touth with new things,
+            <h3 class="school_name">National Yunlin University of Science and Technology</h3>
+            <p>Hello! My major is Information Management, 
+              and I think I am a man who like to try learning new things,
                so in the four year in university, I did a lot of thing I had never done before, 
                such as join hot dance club, and be a cadre of the year in 2019,
-                and in the term of program, I like the frontend better, so I learn the html,
-                 css and javascript some time, therefore I can make a easy RWD web page 
+                and in the aspect of programming, I like the frontend better, so I learn the html,
+                 css and javascript, therefore I can make a easy RWD web page 
             which can be saw by phone or laptop, and use git to push it to github to make people can see it in the network, 
-            and in the future I will keep learning like use boostrap to develop web page, or attemp to use javascript to design
-            animation, and learn how to cascade api and learn how to use frontend frame like vue, to improve the project.
+            and in the future I will keep learning like use boostrap to develop web page, or attemp to use javascript to design more
+            animation, and cascade more api in third party and learn how to use frontend frame like vue, to improve the project.
             </p>
           </div>
         </div>
      </div>
   </div>
    
+  <div class="school">
+    <div class="school_img">
+      <img src="/pic/雲科.jpg" alt="" class="s_img">
+    </div>
+  </div>
 
+  <div class="footer">
+    &copy; copyright 2021 by Tangpoyu
+  </div>
+
+<script src="test.js"></script>
+<link rel="stylesheet" href="home.css">
 </body>
 </html>
