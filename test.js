@@ -15,10 +15,10 @@ $(document).ready(function(){
   });
 
   var school=[
-    ['university','/about_me/pic/雲科.jpg','National Yunlin University of Science and Technology'],
-    ['Senior','/about_me/pic/北科.jpg','Taoyuan Agricultural & Industrial Senior High School'],
-    ['junior','/about_me/pic/建國.jpg','Chien-Kuo Junior High School'],
-    ['Elementary','/about_me/pic/僑愛.jpg','Qiao ai Elementary School']
+    ['university','pic/雲科.jpg','National Yunlin University of Science and Technology'],
+    ['Senior','pic/北科.jpg','Taoyuan Agricultural & Industrial Senior High School'],
+    ['junior','pic/建國.jpg','Chien-Kuo Junior High School'],
+    ['Elementary','pic/僑愛.jpg','Qiao ai Elementary School']
   ];
   
   
