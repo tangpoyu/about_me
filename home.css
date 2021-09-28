@@ -86,7 +86,7 @@ body{
  }
 .wrap .title{
   width:100%;
-  height: 400px;
+  height:100%;
   
   display: flex;
   align-items: center;
@@ -101,7 +101,7 @@ body{
 .school_button_group{
   display: flex;
   position:absolute;
-  right: 0;
+  left: 0;
   justify-content: space-evenly;
   background-color: rgb(37, 33, 25);
 }
@@ -141,6 +141,8 @@ button.school_btn_color{
 }
 .wrap .title .item img{
   width: 33%;
+  height: 100%;
+  margin: auto;
 }
 .wrap .title .item .txt{
  width: 70%;
@@ -158,6 +160,7 @@ button.school_btn_color{
   padding-top: 5px;
   color: rgb(112, 217, 231);
   font-size: 25px;
+  height:60px;
 }
 .wrap .title .item .txt p{
   text-align: center;
@@ -190,8 +193,73 @@ button.school_btn_color{
   width: 100%;
   text-align: center;
 }
+@media screen and (max-width:280px){
+  .row .col-12{
+    padding: 5px;
+    font-size: 3px;
+  }
+  .row .news_marquee{
+    font-size: 20px;
+  }
+  body{
+    width: 100%;
+  }
+  .wrap .title{
+    flex-direction: column;
+    background-image: none;
+    height: 100%;
+  }
+  h2.am{
+    background-color: rgb(154, 214, 224);
+  }
+  .wrap .title h2{
+    font-size: 30px;
+    width: 100%;
+  }
+  .wrap .title .item {
+    opacity: 1;
+    width: 100%;
+    margin: 0px;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    flex-direction: column;
+  } 
+  button.school_btn_color{
+    background-color: rgb(255, 115, 0);
+  }
+  .school_button_group{
+    top:0;
+    left: 88%;
+    flex-direction: column;
+  }
+  .school_button_group .school_button{
+    margin: 0 px;
+  }
+  .wrap .title .item .txt{
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+  }
+  .wrap .title .item .txt h2 {
+    font-size: 30px;
+  }
+  .wrap .title .item .txt h3{
+    height: 55px;
+  }
+  .wrap .title .item img {
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    background-color: yellow;
+  }
+  .wrap .title .item .txt p{
+    padding: 10px;
+    color: white;
+  }
+}
 
-@media screen and (max-width : 767px) {
+@media screen and (min-width:281px) and (max-width : 550px) {
   
   .row .col-12{
     padding: 5px;
@@ -210,7 +278,7 @@ button.school_btn_color{
    
   }
   h2.am{
-    background-color: rgb(255, 174, 174);
+    background-color: rgb(154, 214, 224);
   }
   .wrap .title h2{
     font-size: 30px;
@@ -221,12 +289,22 @@ button.school_btn_color{
     opacity: 1;
     width: 100%;
     margin: 0px;
-    background: rgb(188, 252, 241);
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    
   } 
+  button.school_btn_color{
+    background-color: rgb(255, 115, 0);
+  }
   .school_button_group{
     left: 0;
-    width: 38%;
-    background-color: rgb(224, 187, 255);
+    width: 30%;
+   
+    
+  }
+  .school_button_group .school_button{
+    margin: 0 px;
   }
   .wrap .title .item .txt{
     background-color: rgb(0, 0, 0);
@@ -249,6 +327,73 @@ button.school_btn_color{
     color: white;
   }
 }
+@media screen and (min-width:551px) and (max-width : 767px){
+  .row .col-12{
+    padding: 5px;
+    font-size: 3px;
+  }
+  .row .news_marquee{
+    font-size: 20px;
+  }
+  body{
+    width: 100%;
+  }
+  .wrap .title{
+    flex-direction: column;
+    background-image: none;
+    height: 100%;
+   
+  }
+  h2.am{
+    background-color: rgb(154, 214, 224);
+  }
+  .wrap .title h2{
+    font-size: 30px;
+    width: 100%;
+  }
+  .wrap .title .item {
+    
+    opacity: 1;
+    width: 100%;
+    margin: 0px;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    
+  } 
+  button.school_btn_color{
+    background-color: rgb(255, 115, 0);
+  }
+  .school_button_group{
+    left: 0;
+    width: 15%;
+   
+    
+  }
+  .school_button_group .school_button{
+    margin: 0 px;
+  }
+  .wrap .title .item .txt{
+    background-color: rgb(0, 0, 0);
+  }
+  .wrap .title .item .txt h2 {
+    font-size: 30px;
+  }
+  .wrap .title .item .txt h3{
+    height: 50px;
+  }
+  .wrap .title .item img {
+    margin: auto;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: yellow;
+  }
+  .wrap .title .item .txt p{
+    padding: 10px;
+    color: white;
+  }
+}
 @media screen and (min-width : 768px){
   .news_marquee{
     animation : slide 12s linear infinite ;
@@ -258,5 +403,6 @@ button.school_btn_color{
   }
   .wrap .title .item {
   background-color: rgb(45, 43, 53);
+  width: 100%;
   }
 }
