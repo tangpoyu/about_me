@@ -15,10 +15,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
-
+  <!-- 套用css樣式 -->
+  <link rel="stylesheet" href="../css/menu.css">
+  <link rel="stylesheet" href="../css/home.css">
   <!-- 使用jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+  
   <title>Document</title>
 
 </head>
@@ -27,19 +29,35 @@
   <!-- 導覽列 -->
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Works</a></li>
+
+      <li> 
+        <a href="#">Home</a>
+      </li>
+
+      <li class="itemid2">
+        <a href="#" class="work_ref">Works</a>
+          <!-- work-menu -->
+          <ul class="work_menu">
+            <a href="first.html">first</a>
+          </ul>
+      </li>
+
     </ul>
     <button class="marquee_control"></button>
   </nav>
 
+  
+   
+  
+
   <!-- 跑馬燈 -->
   <div class="container">
+
+    
+
     <div class="row">
-        <div class="col-12" style="padding: 0.5rem;overflow: hidden;">
-           
+        <div class="col-12" style="padding: 0.5rem;overflow: hidden;"> 
                 <div class="news_marquee">Tangpoyu's Design Web Page</div>
-              
         </div>
     </div>
   </div>
@@ -55,11 +73,11 @@
      <div class="title">
       <h2 class="am">About Me</h2>
         <div class="item">
-          <img src="pic/my_pic.JPG">
+          <img src="../pic/my_pic.JPG">
           <div class="txt">
             <div class="school_button_group">
               <!-- 有ｉｄ的話要放在前面 -->
-              <button id="university" class="school_button university">U</button>
+              <button id="university" class="school_button university school_btn_color">U</button>
               <button id="Senior" class="school_button Senior">S</button>
               <button id="junior" class="school_button junior">J</button>
               <button id="Elementary" class="school_button Elementary">E</button>
@@ -76,6 +94,17 @@
             and in the future I will keep learning like use boostrap to develop web page, or attemp to use javascript to design more
             animation, and cascade more api in third party and learn how to use frontend frame like vue, to improve the project.
             </p>
+            <div class="relatedRef">
+              <a href="https://github.com/tangpoyu?tab=repositories">
+                <img src="../pic/github-g6664d4a2b_1280.png" alt="tangpoyu's github">
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100000471862032">
+                <img src="../pic/facebook-2429746_1280.png" alt="tangpoyu's fb">
+              </a>
+              <a href="https://www.instagram.com/boyutang/">
+                <img src="../pic/instagram-1675670_1280.png" alt="tangpoyu's ig">
+              </a>
+            </div>
           </div>
         </div>
      </div>
@@ -83,7 +112,7 @@
    
   <div class="school">
     <div class="school_img">
-      <img src="pic/雲科.jpg" alt="" class="s_img">
+      <img src="../pic/雲科.jpg" alt="" class="s_img">
     </div>
   </div>
 
@@ -91,7 +120,7 @@
     &copy; copyright 2021 by Tangpoyu
   </div>
 
-<script src="test.js"></script>
-<link rel="stylesheet" href="home.css">
+<script src="../test.js"></script>
+
 </body>
 </html>

@@ -1,10 +1,8 @@
 // $ > jquery  多瀏覽器可兼容
 // document > javascript  須對不同瀏覽器個別建置
 
-
 $(document).ready(function(){
-  var btn=document.getElementsByClassName('university')[0];
-  btn.classList.toggle('school_btn_color');
+  
 
   $(".marquee_control").click(function(){
     var mar=document.getElementsByClassName("news_marquee")[0];
@@ -15,10 +13,10 @@ $(document).ready(function(){
   });
 
   var school=[
-    ['university','pic/雲科.jpg','National Yunlin University of Science and Technology'],
-    ['Senior','pic/北科.jpg','Taoyuan Agricultural & Industrial Senior High School'],
-    ['junior','pic/建國.jpg','Chien-Kuo Junior High School'],
-    ['Elementary','pic/僑愛.jpg','Qiao ai Elementary School']
+    ['university','../pic/雲科.jpg','National Yunlin University of Science and Technology'],
+    ['Senior','../pic/北科.jpg','Taoyuan Agricultural & Industrial Senior High School'],
+    ['junior','../pic/建國.jpg','Chien-Kuo Junior High School'],
+    ['Elementary','../pic/僑愛.jpg','Qiao ai Elementary School']
   ];
   
   
@@ -58,7 +56,19 @@ $(document).ready(function(){
   //   }
 
   // });
+  
+  $(".itemid2").hover(function(){
+
+    if($('.work_menu').css("display")=="none"){
+      $('.work_menu').css("display","block");
+    }
+    else{
+      $('.work_menu').css("display","none");
+    }
     
+  });
+ 
+  // 控制學校圖片和學校文字根據 U,S,J,E 按鈕
   $("button[id ='"+school[0][0]+"']").click(function(){
     var img=document.getElementsByClassName("s_img")[0];
     img.src=school[0][1];
@@ -91,8 +101,6 @@ $(document).ready(function(){
     btn[0].classList.toggle('school_btn_color');
     $('.school_name').text("\""+school[2][2]+"\"");
   });
-
-  
 
   $("button[id ='"+school[3][0]+"']").click(function(){
     var img=document.getElementsByClassName("s_img")[0];
