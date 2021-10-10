@@ -330,6 +330,9 @@ button.school_btn_color{
   }
 }
 @media screen and (min-width:551px) and (max-width : 767px){
+  .work_menu{
+    width: 50%;
+  }  
   .row .col-12{
     padding: 5px;
     font-size: 3px;
